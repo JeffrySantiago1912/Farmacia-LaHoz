@@ -1,0 +1,80 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green-primary: #1A9641;
+  --green-dark: #157534;
+  --green-darker: #0e5425;
+  --green-light: #E8F5E9;
+  --green-accent: #4CAF50;
+  --green-pale: #F0FAF2;
+  --white: #FFFFFF;
+  --gray-50: #F8FAFB;
+  --gray-100: #F1F5F1;
+  --gray-200: #E2E8E2;
+  --gray-400: #9CA89C;
+  --gray-600: #5A6B5A;
+  --gray-800: #2D3D2D;
+  --dark: #1A2E1A;
+  --whatsapp: #25D366;
+  --whatsapp-dark: #128C7E;
+  --shadow-sm: 0 2px 8px rgba(26, 150, 65, 0.08);
+  --shadow-md: 0 4px 20px rgba(26, 150, 65, 0.15);
+  --shadow-lg: 0 8px 40px rgba(26, 150, 65, 0.2);
+  --shadow-xl: 0 20px 60px rgba(26, 150, 65, 0.25);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark);
+  background: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--green-primary);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--green-primary);
+  border-radius: var(--radius-full);
+}

@@ -1,0 +1,113 @@
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  transform: scale(0.5) translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wa-float--visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.wa-tooltip {
+  background: var(--dark);
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  animation: tooltip-appear 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wa-tooltip-arrow {
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid var(--dark);
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+@keyframes tooltip-appear {
+  from { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.wa-btn {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: var(--whatsapp);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.wa-btn:hover {
+  background: #20c157;
+  transform: scale(1.1);
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6);
+}
+
+.wa-btn:active {
+  transform: scale(0.95);
+}
+
+.wa-btn__pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--whatsapp);
+  opacity: 0.4;
+  animation: wa-pulse 2.5s ease-out infinite;
+}
+
+.wa-btn__pulse--2 {
+  animation-delay: 0.8s;
+}
+
+@keyframes wa-pulse {
+  0% { transform: scale(1); opacity: 0.4; }
+  70% { transform: scale(1.7); opacity: 0; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+.wa-btn__icon {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .wa-float {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .wa-btn {
+    width: 54px;
+    height: 54px;
+  }
+
+  .wa-btn__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

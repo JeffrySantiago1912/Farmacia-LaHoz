@@ -1,0 +1,237 @@
+.hours {
+  padding: 100px 0;
+  background: linear-gradient(135deg, var(--green-darker) 0%, var(--green-dark) 50%, var(--green-primary) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hours::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+
+.hours::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+
+.hours__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.section-badge--light {
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.hours__title {
+  color: white;
+}
+
+.text-white-green {
+  color: #86efac;
+}
+
+.hours__desc {
+  font-size: 16px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.75;
+}
+
+.hours__desc strong {
+  color: white;
+}
+
+.hours__big-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 20px 24px;
+  border-radius: var(--radius-lg);
+}
+
+.hours__big-badge-icon {
+  font-size: 32px;
+}
+
+.hours__big-badge-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.hours__big-badge-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  margin: 0;
+}
+
+.hours__emergency {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--whatsapp);
+  padding: 18px 22px;
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+  cursor: pointer;
+}
+
+.hours__emergency:hover {
+  background: #20c157;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+}
+
+.hours__emergency-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.hours__emergency-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.hours__emergency-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+}
+
+.hours__emergency-arrow {
+  margin-left: auto;
+  color: rgba(255,255,255,0.8);
+  flex-shrink: 0;
+}
+
+/* Right side */
+.hours__right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hours__schedule {
+  background: white;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.hours__schedule-header {
+  background: var(--green-light);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hours__schedule-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--green-primary);
+  border-radius: 50%;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.hours__schedule-summary {
+  padding: 28px 24px;
+  text-align: left;
+}
+
+.hours__schedule-main {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(34px, 7vw, 56px);
+  line-height: 1;
+  color: var(--green-dark);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hours__schedule-sub {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gray-600);
+}
+
+.hours__schedule-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--green-light);
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hours__open-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--green-primary);
+  border-radius: 50%;
+}
+
+.hours__left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .hours__container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 580px) {
+  .hours {
+    padding: 70px 0;
+  }
+}
