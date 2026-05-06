@@ -71,12 +71,7 @@ export default function Hero() {
 
       </div>
 
-      <div className="hero__scroll-indicator">
-        <div className="hero__scroll-mouse">
-          <div className="hero__scroll-wheel"></div>
-        </div>
-        <span>Desliza para explorar</span>
-      </div>
+
     </section>
   )
 }
