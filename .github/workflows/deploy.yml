@@ -41,6 +41,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Build
+        env:
+          VITE_BASE: /Farmacia-LaHoz/
         run: pnpm build
       - name: Setup Pages
         uses: actions/configure-pages@v4

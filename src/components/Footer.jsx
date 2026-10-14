@@ -111,7 +111,7 @@ export default function Footer() {
           </p>
           <p className="footer__dev">
             Desarrollado por{' '}
-            <a href="https://jeffrysantiago1912.github.io/AbbaTech/" target="_blank" rel="noopener noreferrer">
+            <a href="https://abbatechcompany.netlify.app" target="_blank" rel="noopener noreferrer">
               AbbaTech
             </a>
           </p>
